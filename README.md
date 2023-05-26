@@ -95,6 +95,5 @@ N_POOLS and ITERS should be chosen carefully to provide enough pool combinations
 Pandas and numpy modules.
 
 ### Example
-python Peptide_pooling.py -n_pools 16 -iters 6 -peptides peptides.tsv -unresolved 48 -pools pools.txt -simulation simulation.tsv
 
-
+python Peptide_pooling.py -n_pools 12 -iters 4 -peptides peptides_example.tsv -unresolved 0 -pools pools.txt -simulation simulation.tsv
