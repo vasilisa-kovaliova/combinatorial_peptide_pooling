@@ -61,8 +61,19 @@ To avoid situations like in example 2 (we call them collisions), this script ass
 
 After the first round of peptide assignment, check for collisions happens. In case of collisions, peptides are re-assigned until the number of collisions reaches the specified number. If, after multiple reassignments, collisions are present, the script stops.
 
-## Usage
+### Installation
+```
+git clone https://github.com/vasilisa-kovaliova/combinatorial_peptide_pooling.git
+```
+### Requirements
+Pandas and numpy modules.
 
+You can install them by typing in command line:
+```
+pip install -r requirements.txt
+```
+
+### Usage
 python Peptide_pooling.py -n_pools N_POOLS -iters ITERS -peptides PEPTIDES -unresolved MAX_COLLISIONS -pools OUTPUT_FILE_1 -simulation OUTPUT_FILE_2
 
 Parameters:
@@ -91,9 +102,8 @@ N_POOLS and ITERS should be chosen carefully to provide enough pool combinations
 | 1500               | 18      | 4     | combinations(18, 4) = 3060 | (1500*4)/18 = 333                          |
 | 2000               | 16      | 6     | combinations(16, 6) = 8008 | (2000*6)/16 = 750                          |
 
-### Requirements
-Pandas and numpy modules.
 
 ### Example
-
+```
 python Peptide_pooling.py -n_pools 12 -iters 4 -peptides peptides_example.tsv -unresolved 0 -pools pools.txt -simulation simulation.tsv
+```
